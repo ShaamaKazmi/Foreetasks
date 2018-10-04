@@ -18,7 +18,7 @@ def inverse(f):
 			request.json["op"]=="*"
 		return f(*args,**kwargs)
 
-	return wrapperfunc()
+	return wrapperfunc
 @app.route('/calc',methods=['POST'])
 @inverse	
 def calculator():
