@@ -9,7 +9,7 @@ def inverse(f):
 		req_data=request.get_json()
 		op=req_data["op"]
 		if op=='+':
-	    		request.json["op"]="-"
+    			request.json["op"]="-"
 		elif op=='-':
 			request.json["op"]="+"
 		elif op=='*':
@@ -18,7 +18,7 @@ def inverse(f):
 			request.json["op"]=="*"
 		return f(*args,**kwargs)
 
-	return wrapperfunc()
+	return wrapperfunc
 @app.route('/calc',methods=['POST'])
 @inverse	
 def calculator():
